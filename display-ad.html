@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    position: absolute;
+    width: 160px;
+    height: 600px;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.container {
+  position: absolute;
+  width: 160px;
+  height: 600px;
+  border: 1px solid #3E3F43;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3E3F43;
+  opacity: 90%;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 1.5s ease;
+  z-index: 99;
+}
+
+.container:hover .light {
+  height: 39%;
+  width: 100%;
+}
+
+.container:hover .overlay {
+  height: 61%;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#display-headline {
+    margin-bottom: 20px; 
+}
+
+#display-headline a {
+  font-family: 'GothamMedium';
+  color: white;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+#display-copy a {
+  font-family:'GothamBook';
+  color: white;
+  font-size: 14px;
+}
+
+#button {
+    margin-top: 30%;
+    width: 120px;
+    height: 25px;
+    background-color: #3E3F43;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 5%;
+}
+
+#button a {
+  font-family: 'GothamMedium';
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.light {
+  margin:0 auto;
+  text-align:center;
+  position: absolute;
+  width: 100%;
+  max-height:100%;
+  border-radius: 100% 0 0 100%;
+  left:40px;
+  top:0;
+  
+  -webkit-animation-name: flicker;
+          animation-name: flicker;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.light {
+  position:absolute;
+  background: radial-gradient(ellipse at center, rgba(252, 250, 228, 0.952) 0, rgba(255, 251, 233, 0) 40%, rgba(245, 215, 133, 0) 100%);
+}
+
+
+@keyframes flicker {
+  from {
+      opacity: 0.90;
+    }
+    4% {
+      opacity: 0.70;
+    }
+    8% {
+      opacity: 0.45;
+    }
+    12% {
+      opacity: 0.65;
+    }
+    16% {
+      opacity: 0.80;
+    }
+    20% {
+      opacity: 0.50;
+    }
+    24% {
+      opacity: 0.60;
+    }
+    28% {
+      opacity: 0.40;
+    }
+    32% {
+      opacity: 0.90;
+    }
+    36% {
+      opacity: 0.55;
+    }
+    40% {
+      opacity: 0.40;
+    }
+    44% {
+      opacity: 0.60;
+    }
+    48% {
+      opacity: 0.90;
+    }
+    52% {
+      opacity: 0.60;
+    }
+    56% {
+      opacity: 0.70;
+    }
+    60% {
+      opacity: 0.50;
+    }
+    64% {
+      opacity: 0.65;
+    }
+    68% {
+      opacity: 0.80;
+    }
+    72% {
+      opacity: 0.50;
+    }
+    76% {
+      opacity: 0.40;
+    }
+    80% {
+      opacity: .65;
+    }
+    84% {
+      opacity: 0.40;
+    }
+    88% {
+      opacity: 0.70;
+    }
+    92% {
+      opacity: 0.60;
+    }
+    96% {
+      opacity: 0.80;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('fonts/Gotham-Book.eot');
+    src: url('fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gotham-Book.woff2') format('woff2'),
+        url('fonts/Gotham-Book.woff') format('woff'),
+        url('fonts/Gotham-Book.ttf') format('truetype'),
+        url('fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('fonts/Gotham-Medium.eot');
+    src: url('fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gotham-Medium.woff2') format('woff2'),
+        url('fonts/Gotham-Medium.woff') format('woff'),
+        url('fonts/Gotham-Medium.ttf') format('truetype'),
+        url('fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="logo"><a target="_blank" href="https://www.tesla.com/solarroof?redirect=no"><img src="assets/logo.png" alt="logo" height="90"></a></div>  
+  <div class="image"><img src="assets/bg.jpg" alt="Avatar"></div>
+  <div class="light"></div>
+  <span>
+  <div class="overlay">
+    <div class="text">
+        <div id="display-headline"><a target="_blank" href="https://www.tesla.com/solarroof?redirect=no">Pay Less for Electricity</a></div>
+        <div id="display-copy"><a target="_blank" href="https://www.tesla.com/solarroof?redirect=no">Solar Roof is the only roof that can help pay for itself with the energy you produce.</a></div>
+        <div id="button"><a target="_blank" href="https://www.tesla.com/solarroof?redirect=no">Learn More</a></div>
+    </div>
+  </div>
+</span>
+</div>
+
+</body>
+</html>
+
